@@ -15,8 +15,7 @@ export default function App() {
 
     if (response.status === STATUSOK) {
       let data = await response.text();
-      data = data.replace("[\"", "");
-      data = data.replace("\"]", "");
+      data = data.replace("[\"", "").replace("\"]", "");
       setFlag(data);
       setLoading("");
     } else {
